@@ -37,17 +37,15 @@ print(angles)
 # завдання 3
 
 def meeting_lines(a1, b1, a2, b2):
-    a = np.array([[1, -a1], [1, -a2]])
-    b = np.array([b1, b2])
+    a = np.array([[a1, -1], [a2, -1]])
+    b = np.array([-b1, -b2])
 
     x, y = np.linalg.solve(a, b)
     return x, y
 
 
-a1 = 7
-b1 = 8
-a2 = 3
-b2 = 1
+a1, b1 = 7, 8
+a2, b2 = 3, 1
 
 x, y = meeting_lines(a1, b1, a2, b2)
 
